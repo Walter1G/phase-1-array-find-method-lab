@@ -68,14 +68,17 @@ const record = [
 
 function superbowlWin(record){
 
-    
-      if(record.result === "W"){                
-        return record.year;
-      }   
+     for(let data of record){
+      if(data.result === "W"){                
+        return data.year;
+      }  
+     }
+
 
 }
 
-record.find(superbowlWin);
-const res = record.find(({ result }) => result === "W");
-console.log(res);
+
+// record.find(superbowlWin);
+// const res = record.find(function({ result }){ result === "W"; return result.year});
+// console.log(res);
 
