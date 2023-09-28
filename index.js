@@ -63,22 +63,31 @@ const record = [
 
 
 
+  // function colorFilter2(record, ) {
+  //   for (const data of record) {
+  //     if (data.result === "W") {
+  //       console.log(data.year);
+  //     }
+  //   }
+  // }
+  
+  // colorFilter(users, "Red");
 
 
+function superbowlWin(arrayObj){
 
-function superbowlWin(record){
+  const obj = arrayObj.find(team=>team.result==="W");
+  if(obj){
+    return obj.year
+  }else{
+    return undefined
+  }
 
-     for(let data of record){
-      if(data.result === "W"){                
-        return data.year;
-      }  
-     }
+  
 
-
+     
 }
 
 
-// record.find(superbowlWin);
-// const res = record.find(function({ result }){ result === "W"; return result.year});
-// console.log(res);
+console.log(superbowlWin(record))
 
